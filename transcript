@@ -1,0 +1,19 @@
+vsim -gui work.apb_tb -voptargs=+acc
+# vsim -gui work.apb_tb -voptargs="+acc" 
+# Start time: 08:28:09 on May 20,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.apb_tb(fast)
+# Loading work.apb_slave(fast)
+add wave -position insertpoint sim:/apb_tb/uut/*
+run -all
+# WRITE to 10 = a5a5a5a5
+# WRITE to 20 = 12345678
+# READ from 10 = a5a5a5a5
+# READ from 20 = 12345678
+# ** Note: $finish    : apb_tb.sv(95)
+#    Time: 190 ns  Iteration: 0  Instance: /apb_tb
+# 1
+# Break in Module apb_tb at apb_tb.sv line 95
