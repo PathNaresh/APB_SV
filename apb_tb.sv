@@ -43,6 +43,7 @@ module apb_tb;
             @(posedge PCLK);  // Wait for response
             while (!PREADY) @(posedge PCLK);
             @(negedge PCLK);
+            $display("WRITE to %0h = %0h", addr, PWDATA);
             PSEL = 0;
             PENABLE = 0;
         end
