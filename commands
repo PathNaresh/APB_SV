@@ -1,0 +1,2 @@
+to compile - vlog apb_tb.sv
+to simulate - <bsub> vsim apb_tb -gui "run -all; exit" &   // here apb_tb is the test bench module name but not the file name
