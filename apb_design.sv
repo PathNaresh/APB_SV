@@ -18,7 +18,7 @@ module apb_slave #(
 
     // main logic
     always @(posedge PCLK or negedge PRESETn) begin
-
+	    
       if (!PRESETn) begin
         PREADY <= 0;
         PRDATA <= 0;
